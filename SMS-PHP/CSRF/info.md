@@ -1,6 +1,6 @@
 ### 1. **Summary**
 
-A Cross-Site Request Forgery (CSRF) vulnerability has been identified in the admin panel of the application, specifically on the user's creation page. An attacker can exploit this vulnerability to create a new administrator account with full privileges by submitting a specially crafted request to the vulnerable endpoint.
+A Cross-Site Request Forgery (CSRF) vulnerability has been identified in the admin panel of Stock Management System (SMS-PHP by oretnom23), specifically on the user's creation page. An attacker can exploit this vulnerability to create a new administrator account with full privileges by submitting a specially crafted request to the vulnerable endpoint.
 
 ---
 
