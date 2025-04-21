@@ -50,8 +50,8 @@ Below is the PoC that demonstrates the CSRF vulnerability. The attacker can host
     
 #### **Screenshot of the Newly Created Admin Account**
 
-_The following screenshot demonstrates the result of the CSRF attack, showing the new admin account created by the attacker:
-![1]()
+_The following screenshot demonstrates the result of the CSRF attack, showing the new admin account created by the attacker:-
+![1](https://github.com/th3w0lf-1337/Vulnerabilities/blob/main/SMS-PHP/CSRF/CSRF%20PoC.png)
 
 
 ### 4. **Impact**
