@@ -43,7 +43,7 @@ This exposure of user credentials, even if hashed, poses a serious security risk
 
 #### 5. **Proof of Concept (PoC)**
 
-Below are screenshots of the proof of concept, demonstrating the SQL Injection attack in action, which allows the attacker to reveals sensitive user credentials.
+Below are screenshots of the proof of concept, demonstrating the SQL Injection attack in action, which reveals sensitive user credentials to the attacker.
 
 ![1](https://github.com/th3w0lf-1337/Vulnerabilities/blob/main/SMS-PHP/SQLi/Receiving/Receiving-1.png)
 ![2](https://github.com/th3w0lf-1337/Vulnerabilities/blob/main/SMS-PHP/SQLi/Receiving/Receiving-2.png)
